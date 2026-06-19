@@ -39,7 +39,7 @@ export default function Hero() {
             <div className="relative h-48 w-48 sm:h-56 sm:w-56 lg:h-64 lg:w-64 rounded-2xl overflow-hidden border-4 border-amber-500 dark:border-amber-400 shadow-2xl shadow-amber-900/30 dark:shadow-amber-200/20 bg-zinc-900 dark:bg-slate-100 transition-all duration-500 ease-in-out transform hover:shadow-amber-500/20">
               
               <img 
-                src="/pic.jpg" 
+                src={process.env.PUBLIC_URL + '/pic.jpg'} 
                 alt="Rembrant Pasardan" 
                 className="h-full w-full object-contain bg-zinc-950 dark:bg-[#e2e8f0] contrast-[1.15] dark:contrast-100 transition-all duration-500 ease-in-out group-hover:scale-105"
               />

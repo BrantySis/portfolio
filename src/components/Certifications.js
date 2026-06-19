@@ -7,21 +7,21 @@ const CERTIFICATIONS = [
     title: "Traditional Service Appreciation Award",
     issuer: "Xerox | lexmark Research and Development Corporation",
     date: "2026",
-    pdfUrl: "/certificates/cert-1.pdf",
+   pdfUrl: process.env.PUBLIC_URL + "/certificates/cert-1.pdf",
   },
   {
     id: 2,
     title: "Getting started with charts in Excel 365 (2023)",
     issuer: "Skillsoft",
     date: "2026",
-    pdfUrl: "/certificates/cert-2.pdf",
+    pdfUrl: process.env.PUBLIC_URL + "/certificates/cert-2.pdf",
   },
   {
     id: 3,
     title: "Using PivotTables and PivotCharts in Excel 365 (2024)",
     issuer: "Skillsoft",
     date: "2026",
-    pdfUrl: "/certificates/cert-3.pdf",
+   pdfUrl: process.env.PUBLIC_URL + "/certificates/cert-3.pdf",
   },
 ];
 
