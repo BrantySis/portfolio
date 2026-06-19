@@ -1,13 +1,85 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   GLOBAL BASE STYLES
+   ============================================ */
+html, body {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  background-color: #18181b; /* zinc-950 */
+}
+
+html.dark {
+  background-color: #f8fafc; /* slate-50 */
+}
+
+body {
+  background-color: #18181b;
+}
+
+body.dark {
+  background-color: #f8fafc;
+}
+
+/* ============================================
+   ANIMATION UTILITIES
+   ============================================ */
+@layer components {
+  /* Fade animations */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  .animate-fade-in-slow {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  /* Slide animations */
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  .animate-slide-down {
+    animation: slideDown 0.6s ease-out;
+  }
+
+  .animate-slide-left {
+    animation: slideLeft 0.6s ease-out;
+  }
+
+  .animate-slide-right {
+    animation: slideRight 0.6s ease-out;
+  }
+
+  /* Stagger animations for children */
+  .animate-stagger > * {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  .animate-stagger > *:nth-child(1) { animation-delay: 0s; }
+  .animate-stagger > *:nth-child(2) { animation-delay: 0.1s; }
+  .animate-stagger > *:nth-child(3) { animation-delay: 0.2s; }
+  .animate-stagger > *:nth-child(4) { animation-delay: 0.3s; }
+  .animate-stagger > *:nth-child(5) { animation-delay: 0.4s; }
+  .animate-stagger > *:nth-child(6) { animation-delay: 0.5s; }
+
+  /* Section animations */
+  .section-animate {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  /* Button animations */
+  .btn-animate {
+    @apply transition-all duration-300 hover:scale-105 active:scale-95;
+  }
+
+  /* Card animations */
+  .card-animate {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-lg;
+    animation: slideUp 0.6s ease-out;
+  }
 }
